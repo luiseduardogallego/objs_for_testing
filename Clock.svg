@@ -1,4 +1,4 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574 552" width="574" height="552">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 549" width="550" height="549">
 	<title>Proyecto nuevo</title>
 	<defs>
 		<image  width="1280" height="720" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQAQMAAAD1s08VAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAIdJREFUeJztwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeBrE3wABB8CymgAAAABJRU5ErkJggg=="/>
@@ -6,12 +6,12 @@
 	<style>
 		.s0 { fill: none;stroke: #000000;stroke-width: 3 } 
 	</style>
-	<use id="Background" href="#img1" x="-350" y="-85"/>
-	<path id="Forma 2" class="s0" d="m289.5 526c-139.1 0-251.5-112.4-251.5-251.5 0-139.1 112.4-251.5 251.5-251.5 139.1 0 251.5 112.4 251.5 251.5 0 139.1-112.4 251.5-251.5 251.5z"/>
-	<path id="Forma 3" class="s0" d="m-92-97h803v373h-803z"/>
-	<path id="Forma 4" class="s0" d="m15-214h272v838h-272z"/>
-	<path id="Forma 4 copy" class="s0" d="m-167.3 33.1l235.6-136 419 725.8-235.6 136z"/>
-	<path id="Forma 4 copy 2" class="s0" d="m-271.3 261.2l133-230.4 709.7 409.8-133 230.3z"/>
-	<path id="Forma 4 copy 3" class="s0" d="m241.7-177.5l230.4 133-409.8 709.8-230.3-133.1z"/>
-	<path id="Forma 4 copy 4" class="s0" d="m441.4-120.2l133 230.4-709.7 409.7-133-230.3z"/>
+	<use id="Background" href="#img1" x="-365" y="-85"/>
+	<path id="Forma 2" class="s0" d="m274.5 526c-139.1 0-251.5-112.4-251.5-251.5 0-139.1 112.4-251.5 251.5-251.5 139.1 0 251.5 112.4 251.5 251.5 0 139.1-112.4 251.5-251.5 251.5z"/>
+	<path id="Forma 3" class="s0" d="m-107-97h803v373h-803z"/>
+	<path id="Forma 4" class="s0" d="m0-214h272v838h-272z"/>
+	<path id="Forma 4 copy" class="s0" d="m-182.3 33.1l235.6-136 419 725.8-235.6 136z"/>
+	<path id="Forma 4 copy 2" class="s0" d="m-286.3 261.2l133-230.4 709.7 409.8-133 230.3z"/>
+	<path id="Forma 4 copy 3" class="s0" d="m226.7-177.5l230.4 133-409.8 709.8-230.3-133.1z"/>
+	<path id="Forma 4 copy 4" class="s0" d="m426.4-120.2l133 230.4-709.7 409.7-133-230.3z"/>
 </svg>
