@@ -1,0 +1,289 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+#tasks{
+    width: 100%;
+    height: 63px;
+    background-color: #8d97827f;
+    position: absolute;
+    bottom: 0;
+}
+#desktop{
+    width: 100%;
+    height: calc(100% - 63px);
+    background-color: #82089f;
+    background-image: url(https://lirilc.github.io/A.K.A._Dizzy/blog/xWo3/resources/g[14].png);
+    position: absolute;
+    top: 0;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#tasks > #liril{
+    height: calc(100% - 4px);
+    margin: 2px 2px 2px 2px;
+    padding: 4px 4px 4px 4px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+}
+#tasks > #liril:hover{
+    background-color: #c9bcfd;
+}
+#tasks > #liril:active{
+    background-color: #a79acb;
+}
+#liril_aside{
+    bottom: 63px;
+    position: absolute;
+    height: 300px;
+    width: 501px;
+    background-color: #8d9782;
+    display: none;
+}
+#liril_aside.visible{
+    display: block;
+}
+#liril_aside iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#second {
+  width: 500px;
+  height: 100%;
+  background: #442;
+  position: absolute;
+  left: 64px;
+}
+#icons > div {
+  height: 100%;
+  width: 41px;
+  display: inline-block;
+  vertical-align: top;
+}
+#explorer {
+  background: #425151;
+}
+#calculator {
+  background: #9f92d0;
+}
+#explorer:active:after {
+  color: #fff;
+  content: "kakakawpdm";
+}
+#Leela {
+  left: 564px;
+  position: absolute;
+  width: 175px;
+  height: 30px;
+  background: floralwhite;
+  transform: translate( 0px, 50%);
+}
+#Leela>input {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  border: 1px solid #2ecc71;
+  border-left: 2px solid #cac8c5;
+  box-sizing: border-box;
+  padding-left: 3.9px;
+  font-family: "Open Sans";
+  color: #f90d92;
+  outline: unset !important;
+}
+#easytasks {
+  height: calc(100% - 7px);
+}
+#easytasks > div {
+  top: 6px;
+  left: 5px;
+}
+#easytasks .clock {
+  height: 44px;
+  width: 44px;
+  background: white;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+#easytasks .clock div:nth-child(2) {
+  width: 5px;
+  height: 67%;
+  background: #d3d;
+  position: absolute;
+  top: calc(50% - 33.5%);
+  left: calc(50% - 2.5px);
+  rotate: 10deg;
+  border-radius: 2.5px;
+  border-top: 1px solid black;
+  z-index: 2;
+}
+#easytasks .clock div:nth-child(3) {
+  width: 5.6px;
+  height: 76%;
+  background: #623;
+  position: absolute;
+  top: calc(50% - 38%);
+  left: calc(50% - 2.8px);
+  rotate: 110deg;
+  border-radius: 2.5px;
+  border-top: 1px solid black;
+  z-index: 1;
+}
+#easytasks .clock div:nth-child(1) {
+  width: 4.1px;
+  height: 58%;
+  background: #2dc;
+  position: absolute;
+  top: calc(50% - 29%);
+  left: calc(50% - 2.05px);
+  rotate: 1870deg;
+  border-radius: 2.5px;
+  border-top: 1px solid black;
+  z-index: 3;
+}
+.task{
+    position: absolute;
+}
+.task.focused {
+  outline: 1px solid #f3dd82;
+}
+.task.exploRer{
+    width: 300px;
+    height: 210px;
+}
+.task.calculaTor{
+    width: 300px;
+    height: 300px;
+    top: 210px;
+}
+.task iframe {
+    height: calc(100% - 32px);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    outline: none;
+    border: none;
+}
+buttons div {
+  display: inline-block;
+}
+buttons {
+  float: right;
+}
+.task .opTions {
+  background: #d984df;
+  width: 100%;
+  height: 32px;
+  position: absolute;
+  top: 0;
+}
+buttons div {
+  display: inline-block;
+  background: white;
+  border-radius: 50%;
+  width: 12px;
+  font-family: monospace;
+  text-align: center;
+  margin-right: 5px;
+  height: 12px;
+  font-size: 8px;
+  vertical-align: middle;
+  padding: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.task.focused .ui-resizable-handle{
+    display: block !important;
+}
+.ui-resizable-handle {
+  background: #fdf;
+  height: 7px !important;
+  width: 7px !important;
+  display: none !important;
+  z-index: 12;
+}
+.task .coverDiv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 32px);
+  display: none;
+  z-index: 5;
+}
+.task.focused .coverDiv {
+  display: block;
+}
+.ui-resizable-n {
+ cursor:n-resize;
+ height:7px;
+ width:100%;
+ top:-3px;
+ left:0;
+ right: 0;
+ margin: auto;
+}
+.ui-resizable-s {
+ cursor:s-resize;
+ height:7px;
+ width:100%;
+ bottom:-3px;
+ left:0;
+ right:0;
+ margin:auto;
+}
+.ui-resizable-e {
+ cursor:e-resize;
+ width:7px;
+ right:-3px;
+ top:0;
+ bottom:0;
+ margin: auto;
+ height:100%
+}
+.ui-resizable-w {
+ cursor:w-resize;
+ width:7px;
+ left:-3px;
+ top:0;
+ bottom: 0;
+ margin: auto;
+ height:100%
+}
+.ui-resizable-se {
+ cursor:se-resize;
+ width:12px;
+ height:12px;
+ right:-3px;
+ bottom:-3px
+}
+.ui-resizable-sw {
+ cursor:sw-resize;
+ width:9px;
+ height:9px;
+ left:-3px;
+ bottom:-3px
+}
+.ui-resizable-nw {
+ cursor:nw-resize;
+ width:9px;
+ height:9px;
+ left:-3px;
+ top:-3px
+}
+.ui-resizable-ne {
+ cursor:ne-resize;
+ width:9px;
+ height:9px;
+ right:-3px;
+ top:-3px
+}
