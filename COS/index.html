@@ -15,6 +15,30 @@
     </head>
     <body>
         <section id="desktop">
+            <aside id="_icons">
+                <div class="icon">
+                    <img src="https://images.bonanzastatic.com/afu/images/7a9c/4ef5/fb29_11897837936/__57.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div><div class="icon">
+                    <img src="http://www.usbeacon.com/images/Iowa/maps/Fonda_i.gif" alt="">
+                    <p>Ipsum</p>
+                </div><div class="icon">
+                    <img src="https://images.bonanzastatic.com/afu/images/8050/d251/b093_11502448555/__57.jpg" alt="">
+                    <p>Dolor</p>
+                </div><div class="icon">
+                    <img src="https://c-tiles.locationiq.com/v2/streets/r/16/15500/24186.png?key=pk.426b7ae90d94ba31a6923a9160a6a080" alt="">
+                    <p>Sit</p>
+                </div><div class="icon">
+                    <img src="https://d3vbd4zrteu05a.cloudfront.net/uploads/production/school/35770-v3/image/Fonda-Fultonville__NY__Braves_logo.png" alt="">
+                    <p>Amet</p>
+                </div><div class="icon">
+                    <img src="https://dw3jhbqsbya58.cloudfront.net/school-mascot/a/a/6/aa63b4fe-6354-4e9d-9c40-26de56c53d1f.gif?version=635926027800000000" alt="">
+                    <p>COSAutodestruct.bin</p>
+                </div><div class="icon">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFTRyeAizvbnw/profile-displayphoto-shrink_200_200/0/1516799171267?e=2147483647&v=beta&t=VWdqwEYm9RfLnqp2Y58j467OxULhbC_TO5xXKfAR-e8" alt="">
+                    <p>Goblins</p>
+                </div>
+            </aside>
             <section class="task exploRer">
                 <aside class="opTions">
                     <butTons>
@@ -61,5 +85,73 @@
         </section>
 
         <script src="js/main.js"></script>
+        <script type="module">
+            import selectionDrag from "https://cdn.skypack.dev/selection-drag@1.1.1";
+
+            const container = document.querySelector('#desktop');
+            const { rect } = selectionDrag({ container, targetSelectors: '.icon' });
+
+            rect.addEventListener('_selectstart', e => (function(){if($(".task").is(".active"))console.log($("#selectionRectangle"))})());
+
+            rect.addEventListener('_selectend', e => 
+            // do stuff after items are selected.
+            e.srcElement.style.display= ""
+            );
+
+            rect.addEventListener('_selected', e => {
+            // do stuff when an individual item is selected, such as add an active class.
+             if(!$(".ui-draggable-dragging").length){e.detail.addedElement.classList.add('active');}
+             if($(".ui-draggable-dragging").length){e.srcElement.style.display= "none"}else{e.srcElement.style.display= "block"}
+            });
+
+            rect.addEventListener('_removed', e => {
+            // do stuff when an individual item is removed, such as remove an active class.
+             e.detail.removedElement.classList.remove('active');
+             console.log(e.detail.removedElement);
+            });
+
+
+
+
+            /** 
+            * Other code such as container drop event listeners, where
+            * you can remove & disable the mouse selection area
+            */
+            window.addEventListener('mouseup', e => {
+            /*if (
+              !e.target.matches('ul *') &&                 !e.target.matches('div#selectionRectangle')
+            ) {
+                document.querySelectorAll('.listitem').forEach(ele => {
+                  ele.classList.remove('active');
+                })
+            }*/
+            })
+            $(".icon").draggable({
+                grid: [55.2512332, 100],
+                cursor: "move", 
+                /*snap: ".vidVidCustomizationMode, .widgetero, .widgetero .widget", */
+                revertDuration: 100,
+                /*snapTolerance: 10,*/
+                /*grid: ($("#gridWidth").val() == "0" && $("#gridHeight").val() == "0") || !gridSnapping? false: [parseInt($("#gridWidth").val()), parseInt($("#gridHeight").val())],*/
+            containment: "#desktop",
+                revert: false,
+                start: function(event, ui) {
+                    if(!$('.clock').last().hasClass("dropped")){ 
+                        ui.helper.data('dropped', false);
+                    }else{
+                        
+                    }
+                  
+                },
+                stop: function(event, ui)
+                {
+                    /*if(!ui.helper.data('dropped')){
+                        /*if($("#customizationBars").hasClass("open")){
+                        $(this).remove()}
+                       */   /*
+                    }*/
+                }
+            })
+        </script>
     </body>
 </html>

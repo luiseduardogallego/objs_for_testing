@@ -188,20 +188,20 @@ $(".task").draggable({
     containment: "#desktop",
     revert: false,
     start: function(event, ui) {
-        if(!$('.clock').last().hasClass("dropped")){ 
+        /*if(!$('.clock').last().hasClass("dropped")){ 
             ui.helper.data('dropped', false);
         }else{
             
-        }
+        }*/
       
     },
     stop: function(event, ui)
     {
-        if(!ui.helper.data('dropped')){
+        /*if(!ui.helper.data('dropped')){
             /*if($("#customizationBars").hasClass("open")){
             $(this).remove()}
-           */   
-        }
+           */   /*
+        }*/
     }
 })
 
@@ -232,3 +232,40 @@ $( ".task" ).resizable({
     snapTolerance: 8
 })
 $(".task .coverDiv").on("click", function(){$(".task").removeClass("focused")})
+
+ShifT= false;
+
+$(document).on("keydown", function(dfz){if(dfz.shiftKey)ShifT=true})
+$(document).on("keyup", function(dfz){if(!dfz.shiftKey)ShifT=false})
+$(window).on("blur", function(dfz){ShifT=false})
+$("#desktop").on("mousedown", function(dfz){
+if(!ShifT && !$(".icon").filter(function(){return $.contains($(this)[0], dfz.target)?true:false}).length){
+    $(".active").removeClass("active")}
+else if(ShifT && $(".icon").filter(function(){return $.contains($(this)[0], dfz.target)?true:false}).length){
+    var aac= $(".icon").filter(function(){return $.contains($(this)[0], dfz.target)?true:false});
+    aac.is(".active")?aac.removeClass("active"):aac.addClass("active");
+}
+else if(!ShifT){
+    var aac= $(".icon").filter(function(){return $.contains($(this)[0], dfz.target)?true:false});
+    $(".icon").removeClass("active");
+    aac.addClass("active");
+}})
+$(".icon p").each(function(){ 
+    var height= 0; 
+    if(document.createRange){ 
+        var range= document.createRange(); 
+        range.selectNodeContents($(this)[0].childNodes[0]); 
+        if(range.getBoundingClientRect){ 
+            var rect= range.getBoundingClientRect(); 
+            if(rect){ 
+                height= rect.bottom - rect.top; 
+            } 
+        } 
+    } 
+      
+    if(height > 22){ 
+        $(this).attr("title", $(this)[0].innerText); 
+    }else{ 
+        $(this).attr("title", ""); 
+    } 
+}); 

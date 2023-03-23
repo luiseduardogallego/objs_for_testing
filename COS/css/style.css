@@ -22,6 +22,8 @@ body, html{
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    padding: 2.1256166px;
+    box-sizing: border-box;
 }
 #tasks > #liril{
     height: calc(100% - 4px);
@@ -41,9 +43,10 @@ body, html{
     bottom: 63px;
     position: absolute;
     height: 300px;
-    width: 501px;
+    width: 892px;
     background-color: #8d9782;
     display: none;
+    z-index: 10000000000000;
 }
 #liril_aside.visible{
     display: block;
@@ -175,9 +178,11 @@ body, html{
 }
 buttons div {
   display: inline-block;
+  user-select: none;
 }
 buttons {
   float: right;
+  user-select: none;
 }
 .task .opTions {
   background: #d984df;
@@ -185,6 +190,12 @@ buttons {
   height: 32px;
   position: absolute;
   top: 0;
+}
+#selectionRectangle{
+    border: 1px dashed rgb(204, 204, 204) !important;
+    background: rgba(49, 200, 115, 0.2) !important;
+    box-sizing: border-box;
+    position: absolute !important;
 }
 buttons div {
   display: inline-block;
@@ -286,4 +297,34 @@ buttons div {
  height:9px;
  right:-3px;
  top:-3px
+}
+.icon img {
+  width: 51px;
+  border: 1px solid #c1a7db;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.icon p {
+  user-select: none;
+  word-wrap: unset;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 22px !important;
+  color: #dbdbe1;
+  max-width: 50px;
+  font-family: "Open Sans";
+  font-size: 13px;
+  text-align: center;
+  text-shadow: 1.2px 1.2px #2d4a49, 1.7px 2.45px #345e5c;
+}
+.icon {
+  display: inline-block;
+  margin: 2.1256166px;
+  vertical-align: top;
+  z-index: 0;
+}
+.icon.active{
+    outline: 2px groove #fff;
 }
