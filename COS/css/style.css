@@ -22,7 +22,6 @@ body, html{
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 2.1256166px;
     box-sizing: border-box;
 }
 #tasks > #liril{
@@ -321,7 +320,8 @@ buttons div {
 }
 .icon {
   display: inline-block;
-  margin: 2.1256166px;
+  margin-left: 4.2512332px;
+  margin-top: 4.2512332px;
   vertical-align: top;
   z-index: 0;
 }
